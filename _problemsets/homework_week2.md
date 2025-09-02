@@ -24,12 +24,12 @@ help, the value for a is 8.3 and for b is 10
 Now, write a line of code that prints out the following:
 
 ```
-help, the value for a is 8 and for b is 1.0e+01
+help, the value for a is 8 and for b is 1.000000e+01
 ```
  
 ### 2. Formatted Printing and Writing
 
-Using the Wikipedia page here -- <https://en.wikipedia.org/wiki/List_of_nearest_bright_stars> -- write a Python script to create a file called ``nearestAstars.txt`` and populate it with the following two lines:
+Using the Wikipedia page here -- <https://en.wikipedia.org/wiki/List_of_nearest_bright_stars> -- create a file called ``nearestAstars.txt`` and populate it with the following two lines:
 
 ```
 The nearest A star is Sirius at a distance of 2.638 parsecs
@@ -39,7 +39,7 @@ the second nearest A stars is Altair at a distance of 5.1227 parsecs
 
 The numbers in these lines should not be hard-coded but created with formatted print statements using the ``{}`` modern formatting style.  Assume a conversion of 3.26 pc = 1 light-year.
 
-You can either write the script to run at command line (i.e. python [name of script]) or from importing and executing a function within the script from Python prompt.
+
 
 
 ### 3. Argument Passing and Running Python Code
@@ -51,11 +51,11 @@ fwhm=1.028*206265*lambda*1e-6/d_tel
 
 where d_tel is the telescope diameter in meters, lambda is the wavelength in microns and FWHM is the full-width-at-half-maximum of a point source in arc-seconds ...
 
-* Write a Python script called ``compute_fwhm.py`` executable from command line that accepts lambda and d_tel as arguments and prints out the value for the FWHM to three decimal places.  Demonstrate your script using a telescope diameter of 10 meters and wavelength of 1.65 microns.
+* Write a Python script called ``compute_fwhm.py`` executable from command line that accepts lambda and d_tel as arguments and prints out the value for the FWHM
 
 HINTS: 
 
-1) you can name your variables to be whatever you want **provided that they do not clash with something intrinsic to Python**
+1) you can name your variables to be whatever you want provided that they do not clash with something intrinsic to Python 
 
 2) make sure you understand clearly what 'type' each thing is in your code.
 
@@ -63,14 +63,7 @@ HINTS:
 
 * Write a revised version of the Python script from Question #3 that requires the user instead to _import_ and then execute a function (from Python prompt, i.e. the thing likely starting with "<<<" on your computer). 
 
- Instead of just printing the answer, it should return the value of the FWHM, Telescope Diameter (``d_tel``), and wavelength (``wvlh``), where ``d_tel`` and ``lambda`` are free parameters that you can change when you call the function.  Demonstrate running this script and returning the result as a variable (i.e. >>> [result] = [the executed function]
- 
- Then include a final print statement containing the result of executing this code.  It should be a formatted print statement and read (all on one single line)
- ``Given a wavelength of [answer for wavelength]``
- `` and telescope diameter of [answer for telescope diameter]``
- `` the FWHM is [answer for FWHM]``
- 
- Set the default values for ``d_tel`` and ``lambda`` to be 10 meters and 1.65 microns, respectively.  Run the script using ``d_tel`` = 30 meters and ``lambda`` = 3.78 microns.
+ Instead of just printing the answer, it should returns the value of the FWHM, where ``d_tel`` and ``lambda`` are free parameters that you can change when you call the function.  Demonstrate running this script and returning the result as a variable (i.e. >>> result = [the executed function]
  
  
 ### 5. Functions, If-Then Statements
@@ -88,7 +81,7 @@ def gold_room():
     except:
        dead("You chose a non-integer amount of coins. \n Trying in vain to break one of the coins into pieces, you upset the bear who rips your face off.")
 
-    if choice < 50:
+    if how_much < 50:
         print("Nice, you're not greedy.  You escape the bear on your way out.  You Win!")
         exit(0)
     else:
@@ -156,3 +149,60 @@ def start():
 
 * part A [you don't need to write anything for the HW, just understand this part] - figure out how to get the game started. Look at the source code to see the order in which each function is called.  Make sure you understand the ``if-then`` structures.
 * part B - add another option besides the left or right door (with appropriate print statements) .  Make the outcome dependent upon chance (hint use ``np.random.rand``).
+
+### Part 2: Data Structures
+
+### 6. Dictionaries
+
+Use three defined dictionaries with the following entries -- 1. city + country abbreviation, 2. country abbreviation + skyscraper, 3. skyscraper + height.   
+
+Assume the following building heights (i.e. this will be dictionary number 3):
+ Petronas Towers - 1483 ft
+ WTC - 1776 ft
+ Eiffel Tower - 1083 ft
+ 
+ Write a for-loop that prints out the country, abbreviation, city, building, and height converted to au (assume 1 foot = 2.0375e-12 au):
+ 
+ ```
+The tallest building in the city of Paris, FR is the Eiffel Tower with a height of 2.207e-09 au
+The tallest building in the city of New York, USA is the WTC with a height of 3.619e-09 au
+The tallest building in the city of Kuala Lumpur, MY is the Petronas Towers with a height of 3.022e-09 au
+ ```
+
+### 7. Lists, Arrays, Loops and Type Conversions:
+
+Start with a list 4 elements long, including a mix of floating point numbers and integers: $\pi$, e, 3.1 and 5.
+
+Remove 3.1 using the ``remove`` function and array indexing.  
+
+Append Euler's gamma constant to the list
+
+Write a line of code that prints out ``a``, repeated 3 times
+
+Write a line of code that prints out each element of ``a`` multiplied by 3
+
+Write a for-loop that prints out each element of ``a`` multiplied by 3
+
+### 8. Slicing 
+
+Consider the array:
+
+``a=[2,3,5,6,8,9,10]``
+
+Use slicing to produce the following:
+
+ ``[2,5,8,10]``
+ 
+ ``[6,8,9]``
+ 
+ ``[10, 9, 8, 6, 5, 3, 2]``
+ 
+### 9. Slicing 
+ 
+ Convert ``a`` to an array and then use conditional/boolean slicing to print out
+ 
+ ``array([ 6,  8,  9, 10])``
+ 
+ 
+ ``array([ 2,  8,  9, 10])``
+
