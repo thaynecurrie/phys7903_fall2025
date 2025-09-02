@@ -3,7 +3,9 @@
 
 #  Basic Python
 
-## Homework - Week 2 (part 1 of 2) (due Sept 9)
+## Homework - Week 2  (due Sept 9)
+
+### Part 1: Basics
 
 ### 1. Formatted Printing 
 
