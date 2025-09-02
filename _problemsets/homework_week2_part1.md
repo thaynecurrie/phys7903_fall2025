@@ -88,7 +88,7 @@ def gold_room():
     except:
        dead("You chose a non-integer amount of coins. \n Trying in vain to break one of the coins into pieces, you upset the bear who rips your face off.")
 
-    if how_much < 50:
+    if choice < 50:
         print("Nice, you're not greedy.  You escape the bear on your way out.  You Win!")
         exit(0)
     else:
