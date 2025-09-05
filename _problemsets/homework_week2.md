@@ -39,7 +39,7 @@ the second nearest A stars is Altair at a distance of 5.1227 parsecs
 
 ```
 
-The numbers in these lines should not be hard-coded but created with formatted print statements using the ``{}`` modern formatting style.  Assume a conversion of 3.26 pc = 1 light-year.
+The numbers in these lines should not be hard-coded but created with formatted print statements using the ``{}`` modern formatting style.  Assume a conversion of 1 pc = 3.26 light-year.
 
 
 
