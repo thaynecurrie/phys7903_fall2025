@@ -144,7 +144,8 @@ def ex3(rcond=1e-15):
  #print('s is ',s)
  print(rcond*s,rcond*np.amax(s,axis=-1,keepdims=True))
 
- print(np.amax(s,axis=-1,keepdims=True))
+ print(np.amax(s,axis=-1,keepdims=True)[0])
+ print('the minimum singular value is {0:.3e}'.format( np.amax(s,axis=-1,keepdims=True)[0]))
  print(np.amin(s,axis=-1,keepdims=True))
 
  #plot stuff
@@ -185,7 +186,7 @@ def ex3(rcond=1e-15):
  #print("the manual pseudo-inverse yields")
  #print(aaa_inv2)
 
- print("the residual between the straightforward inverse and NumPy pseudo-inverse are")
+ print("the residual between the straightforward inverse and NumPy pseudo-inverse are ...")
  print(aaa_invreg-aaa_inv)
  print("the sigma-sum is ...")
  print(np.sum(((aaa_invreg-aaa_inv)**2.)))
