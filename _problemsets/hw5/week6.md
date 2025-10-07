@@ -94,4 +94,4 @@ I will try to give you some feedback and hopefully we can define a project that 
 
 ### 7. Feedback (0.5 pts)
 
-We are now about 5 weeks into the course (about 1/3 of the way done!).  Structurally, what in your opinion is working with the course? What is not working?
+We are almost halfway done with the course.  Structurally, what in your opinion is working with the course? What is not working?
