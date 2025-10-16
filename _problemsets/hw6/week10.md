@@ -1,6 +1,6 @@
 # _Python for Scientific Data Analysis_
 
-## Homework - Week 10 (Due Nov 1)
+## Homework #6 (Due Oct 30)
 
 
 ### 1. Simple Matplotlib Plotting
