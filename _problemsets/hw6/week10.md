@@ -31,8 +31,8 @@ lowg=np.where( ( flag == 'lowg') | (flag == 'young') | (flag == 'lowg,young') | 
 * note: the problem will require you to inspect the file to see the column headers.
 
 * note: to convert from apparent to absolute magnitude ...
- $abs_{\rm mag}$ = $app_{\rm mag}$-5*log$_{\rm 10}$(distance/10 $pc$).    And the distance is related to the parallax as:
- $distance (pc) = 1 /parallax$. 
+ $abs_{\rm mag}$ = $app_{\rm mag}$-5*log$_{\rm 10}$(distance/10 $pc$).    And the distance is related to the parallax (measured in milli-arcseconds) as:
+ $distance (pc) = 1e3 /parallax$. 
  
  i.e. To go from apparent magnitude to absolute magnitude (e.g. J to $M_{\rm J}$) do:
  
