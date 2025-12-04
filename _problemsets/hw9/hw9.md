@@ -48,6 +48,41 @@ These problems require combining topics we have learned in the last few weeks of
 
 ### Problem 4 (Maximum-Likelihood Fitting, Markov Chain Monte Carlo)
 
+For this problem, you need a model-generating function.  Here it is (drawn from part1 of this section's notes)
+
+```
+# Generate synthetic RV data for a planet
+def rv_model(t, K, P):
+    """Radial velocity model for a planet"""
+    # Mean anomaly
+    
+    #problem will adopt t0=0, e=0, and omega=0 for simplicity
+    t0=0 
+    e=0  
+    omega=0
+    M = 2 * np.pi * (t - t0) / P
+    
+    # Solve Kepler's equation iteratively for eccentric anomaly E
+    E = M.copy()
+    for _ in range(10):
+        E = M + e * np.sin(E)
+    
+    # True anomaly
+    nu = 2 * np.arctan2(np.sqrt(1 + e) * np.sin(E/2), 
+                         np.sqrt(1 - e) * np.cos(E/2))
+    
+    # RV
+    rv = K * (np.cos(nu + omega) + e * np.cos(omega))
+    return rv
+
+def rv_model_multi(t, params):
+    """Multi-planet RV model"""
+    K1, P1, K2, P2 = params
+    rv1 = rv_model(t, K1, P1)
+    rv2 = rv_model(t, K2, P2)
+    return rv1 + rv2 
+```
+
 * perform a maximum-likelihood fit to the amplitudes of the two signals (K1 and K2) and periods of the two signals (P1 and P2).  Use the visual inspection of the plots in Problem 3 and the return values for the periodic signals to guide your initial guesses.
 
 * set up a Markov Chain Monte Carlo simulation.  Add in functions for the prior and probability following the notes.   Assume uninformative (flat) priors between two extrema for each of the 4 parameters.  Use the results of the maximum-likelihood fit and visual inspection of the plots Problem 3 to guide your limits.  
